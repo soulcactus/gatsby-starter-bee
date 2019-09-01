@@ -11,14 +11,14 @@ export const PostNavigator = ({ pageContext }) => {
       <li>
         {previous && (
           <Link to={previous.fields.slug} rel="prev">
-            ← {previous.frontmatter.title}
+            ← 이전 포스트
           </Link>
         )}
       </li>
       <li>
         {next && (
           <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} →
+            다음 포스트 →
           </Link>
         )}
       </li>
