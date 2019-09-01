@@ -4,6 +4,10 @@ body.light {
 
   p {
     text-align: justify;
+
+    &.post-date {
+      text-align: right;
+    }
   }
 
   img {
