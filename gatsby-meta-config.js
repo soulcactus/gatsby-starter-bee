@@ -2,7 +2,7 @@ module.exports = {
   title: `SOULCACTUS`,
   description: `선인장의 개발 블로그`,
   author: `Soulcactus`,
-  introduction: `Fron-End Developer & UX/UI designer`,
+  introduction: `🌵 Front-End Developer`,
   siteUrl: `https://soulcactus.netlify.com`,
   social: {
     twitter: ``,
