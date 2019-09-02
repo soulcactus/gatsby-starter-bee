@@ -1,5 +1,5 @@
 ---
-title: 'Graphql 소개 및 사용기'
+title: 'GraphQL 소개 및 사용기'
 date: 2019-9-2 18:49:08
 category: 'development'
 ---
