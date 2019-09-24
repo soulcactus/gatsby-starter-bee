@@ -1,5 +1,5 @@
 ---
-title: 'Svelte 설치방법(Quick Start)'
+title: 'Svelte 설치하기(Quick Start)'
 date: 2019-9-24 13:22:03
 category: 'svelte'
 ---
