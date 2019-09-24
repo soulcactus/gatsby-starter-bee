@@ -41,21 +41,21 @@ GraphQL에 관해서는 조만간 GraphQL, Apollo, Parcel을 조합해 사용해
 
 ### 1. Gatsby 프로젝트 시작
 
-```sh
+```bash
 # create a new Gatsby site using the blog starter
 $ npx gatsby new my-blog-starter https://github.com/JaeYeopHan/gatsby-starter-bee
 ```
 
 또는
 
-```sh
+```bash
 $ npm install -g gatsby-cli
 $ gatsby new my-blog-starter https://github.com/JaeYeopHan/gatsby-starter-bee
 ```
 
 ### 2. 로컬에서 확인
 
-```sh
+```bash
 $ cd my-blog-starter/
 $ npm start
 # open localhost:8000
@@ -103,12 +103,12 @@ $ npm start
 
 - gh-pages 패키지를 설치합니다.
 
-```sh
+```bash
 $ npm i --save-dev gh-pages
 ```
 
 - 빌드를 진행합니다.
 
-```sh
+```bash
 $ npm run deploy
 ```

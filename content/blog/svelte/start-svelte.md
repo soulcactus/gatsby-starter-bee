@@ -22,19 +22,19 @@ category: 'svelte'
 
 - 압축을 해제한 뒤 터미널에서 해당 디렉토리로 이동합니다.
 
-```sh
+```bash
 cd /path/to/svelte-app
 ```
 
 - 패키지 파일을 설치합니다.
 
-```sh
+```bash
 npm install
 ```
 
 - 설치가 완료되면 아래의 명령어를 통해 개발모드를 실행합니다.
 
-```sh
+```bash
 npm run dev
 ```
 
@@ -50,13 +50,13 @@ npm run dev
 
 - 터미널에 다음과 같이 입력하여 새 svelte 프로젝트 디렉토리를 생성합니다.
 
-```sh
+```bash
 npx degit sveltejs/template my-svelte-project
 ```
 
 - 마찬가지로 해당 디렉토리로 이동해 패키지 파일을 설치한 뒤 개발모드를 실행합니다.
 
-```sh
+```bash
 cd my-svelte-project
 npm install
 npm run dev

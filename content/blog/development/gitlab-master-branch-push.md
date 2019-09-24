@@ -8,7 +8,7 @@ category: 'development'
 
 Gitlab 사용 중 master branch로 push시 아래와 같은 오류가 발생하는 경우가 있습니다.
 
-```sh
+```bash
 ! [remote rejected] master -> master (pre-receive hook declined)
 error: failed to push some refs to
 ```
