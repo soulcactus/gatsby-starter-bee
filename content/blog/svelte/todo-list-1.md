@@ -61,7 +61,7 @@ npm i node-sass svelte-preprocess
 
 - 그 다음 rollup.config.js에 설정을 추가합니다.
 
-```javascript
+```javascript{4, 12}
 // rollup.config.js
 
 // add this import
@@ -79,6 +79,10 @@ export default {
   /* ... */
 }
 ```
+
+### modules.scss
+
+####
 
 - styles 디렉토리 생성 및 modules.scss 파일 추가
 
@@ -155,6 +159,10 @@ export default {
 }
 ```
 
+### variables.scss
+
+####
+
 - variables.scss 파일 추가
 
 ####
@@ -183,6 +191,10 @@ $border-color: #e1e5e7;
 // placeholder
 $placeholder-color: #ccc;
 ```
+
+### global.scss
+
+####
 
 - global.scss 파일 추가
 
@@ -235,7 +247,7 @@ SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용�
 
 - App.svelte에 global.scss 적용
 
-```javascript
+```javascript{4}
 // src/App.svelte
 
 /* ... */
@@ -246,6 +258,10 @@ SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용�
 scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속성을 추가해야 합니다.
 
 ## 💎 컴포넌트 생성
+
+### PageTemplate.svelte
+
+####
 
 - components 디렉토리를 생성하고 PageTemplate.svelte 파일을 추가합니다.
 
@@ -269,7 +285,7 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 마크업 구조는 위와 같습니다. slot은 자식 컴포넌트를 받아서 렌더링하고 싶을 때 사용합니다. vue 등에서도 지원하는 방식입니다.
 
-- 그런 다음 스타일을 추가합니다.
+- 스타일을 추가합니다.
 
 ####
 
@@ -317,11 +333,11 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 </div>
 ```
 
-variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때, h1과 img, div 태그에 적용된 스타일은 컴포넌트 내부의 h1과 img, div에만 자동으로 적용됩니다. 전역으로 적용되지 않습니다.</b>
+variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때, h1과 img, div 태그에 적용된 스타일은 컴포넌트 내부의 h1과 img, div 태그에만 자동으로 적용됩니다. 전역으로 적용되지 않습니다.</b>
 
 - props를 설정합니다.
 
-```javascript
+```javascript{3-6}
 // src/components/PageTemplate.svelte
 
 <script>
@@ -342,7 +358,11 @@ variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때
 </div>
 ```
 
-SVELTE에서 component prop을 생성하기 위해서는 export를 사용합니다. props를 설정한 다음 마크업에 적용합니다.
+SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니다. props를 설정한 다음 마크업에 적용합니다.
+
+### TodoInput.svelte
+
+####
 
 - TodoInput.svelte 파일을 추가하고 마크업과 스타일을 작성합니다.
 
@@ -389,6 +409,10 @@ SVELTE에서 component prop을 생성하기 위해서는 export를 사용합니�
 <input type="text" placeholder="새로운 일정을 입력해 주세요" />
 <button type="button">추가</button>
 ```
+
+### TodoItem.svelte
+
+####
 
 - TodoItem.svelte 파일을 추가하고 마크업과 스타일을 작성합니다.
 
@@ -515,7 +539,7 @@ npm i rollup-plugin-alias
 
 - 그 다음 rollup.config.js에 설정을 추가합니다.
 
-```javascript
+```javascript{4,  11-14}
 // rollup.config.js
 
 // add this import
@@ -542,7 +566,7 @@ npm i rollup-plugin-svg
 
 - 그 다음 rollup.config.js에 설정을 추가합니다.
 
-```javascript
+```javascript{4, 11-13}
 // rollup.config.js
 
 // add this import
@@ -572,9 +596,15 @@ document.body.appendChild( logo )
 <img src="{logo}" alt="Whatever" />
 ```
 
+### TodoList.svelte
+
+####
+
 - TodoList.svelte 파일을 추가하고 마크업과 스타일 작성 및 TodoItem 컴포넌트를 import합니다.
 
 ```javascript
+// src/components/TodoList.svelte
+
 <script>
   import TodoItem from "~/components/TodoItem.svelte";
 </script>
@@ -590,9 +620,13 @@ document.body.appendChild( logo )
 </ul>
 ```
 
+### App.svelte
+
+####
+
 - 마지막으로 App.svelte 파일을 수정하고 PageTemplate 컴포넌트에 props를 전달합니다.
 
-```javascript
+```javascript{3-10, 14-17}
 // src/App.svelte
 
 <script>
@@ -618,6 +652,7 @@ document.body.appendChild( logo )
 
 1. [Svelte 설치하기(Quick Start)](https://soulcactus.netlify.com/svelte/start-svelte/)
 2. [Svelte로 Todo List App 만들기(1) - 레이아웃](https://soulcactus.netlify.com/svelte/todo-list-1/)
+3. [Svelte로 Todo List App 만들기(2) - 데이터 생성, 읽기, 갱신, 삭제(CRUD) Part.1](https://soulcactus.netlify.com/svelte/todo-list-2/)
 
 ####
 
