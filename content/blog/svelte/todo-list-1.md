@@ -84,7 +84,7 @@ export default {
 
 ####
 
-- styles 디렉토리 생성 및 modules.scss 파일 추가
+- styles 디렉토리 생성 및 modules.scss 파일을 추가합니다.
 
 ####
 
@@ -163,7 +163,7 @@ export default {
 
 ####
 
-- variables.scss 파일 추가
+- variables.scss 파일을 추가합니다.
 
 ####
 
@@ -196,7 +196,7 @@ $placeholder-color: #ccc;
 
 ####
 
-- global.scss 파일 추가
+- global.scss 파일을 추가합니다.
 
 ####
 
@@ -245,7 +245,7 @@ SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용�
 }
 ```
 
-- App.svelte에 global.scss 적용
+- App.svelte에 global.scss를 적용합니다.
 
 ```javascript{4}
 // src/App.svelte
@@ -287,13 +287,7 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 - 스타일을 추가합니다.
 
-####
-
-> 공식문서 예제처럼 script, style, 마크업 순서로 작성했으나, 순서는 크게 중요하지 않습니다.
-
-####
-
-```javascript
+```javascript{3-29}
 // src/components/PageTemplate.svelte
 
 <style lang="scss">
@@ -335,9 +329,15 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때, h1과 img, div 태그에 적용된 스타일은 컴포넌트 내부의 h1과 img, div 태그에만 자동으로 적용됩니다. 전역으로 적용되지 않습니다.</b>
 
-- props를 설정합니다.
+- props를 설정한 다음 적용합니다.
 
-```javascript{3-6}
+####
+
+> 공식문서 예제처럼 script, style, 마크업 순서로 작성했으나, 순서는 크게 중요하지 않습니다.
+
+####
+
+```javascript{3-6, 13-14}
 // src/components/PageTemplate.svelte
 
 <script>
@@ -358,7 +358,7 @@ variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때
 </div>
 ```
 
-SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니다. props를 설정한 다음 마크업에 적용합니다.
+SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니다.
 
 ### TodoInput.svelte
 
@@ -600,7 +600,7 @@ document.body.appendChild( logo )
 
 ####
 
-- TodoList.svelte 파일을 추가하고 마크업과 스타일 작성 및 TodoItem 컴포넌트를 import합니다.
+- TodoList.svelte 파일을 추가하고 TodoItem 컴포넌트를 import한 다음, 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoList.svelte
