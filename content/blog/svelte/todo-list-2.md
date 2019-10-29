@@ -121,6 +121,32 @@ category: 'svelte'
 
 SVELTE에서 요소에 이벤트를 바인딩할 때는 on:eventname 패턴으로 작성해야 합니다.
 
+- 부모 컴포넌트의 상태값을 변경하기 위해 요소에 todoValue를 직접 바인딩합니다.
+
+```javascript{16}
+// src/components/TodoInput.svelte
+
+<script>
+  export let todoValue;
+  export let handleKeyup;
+  export let handleInsert;
+</script>
+
+<style lang="scss">
+  /* ... */
+</style>
+
+<input
+    type="text"
+    placeholder="새로운 일정을 입력해 주세요"
+    bind:value={todoValue}
+    on:keyup={e => handleKeyup(e)}
+/>
+<button type="button">추가</button>
+```
+
+SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으로 작성해야 합니다. 뷰의 v-model과 거의 동일한 방식입니다(양방향 바인딩).
+
 이제 input 값이 변경될 때마다 todoValue 값이 업데이트됩니다. 상태값이 잘 업데이트되고 있는지 확인하기 위해 SVELTE Chrome Extension을 설치합니다.
 
 ### Svelte Devtools 설치

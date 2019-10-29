@@ -364,7 +364,7 @@ SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니�
 
 ####
 
-- TodoInput.svelte 파일을 추가하고 마크업과 스타일을 작성합니다.
+- TodoInput.svelte 파일을 추가하고 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoInput.svelte
@@ -414,7 +414,7 @@ SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니�
 
 ####
 
-- TodoItem.svelte 파일을 추가하고 마크업과 스타일을 작성합니다.
+- TodoItem.svelte 파일을 추가하고 icon을 import한 다음, 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoItem.svelte

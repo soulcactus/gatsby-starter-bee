@@ -62,3 +62,14 @@ npm install
 npm run dev
 # open localhost:5000
 ```
+
+## 💎 Svelte로 Todo List App 만들기
+
+1. [Svelte 설치하기(Quick Start)](https://soulcactus.netlify.com/svelte/start-svelte/)
+2. [Svelte로 Todo List App 만들기(1) - 레이아웃](https://soulcactus.netlify.com/svelte/todo-list-1/)
+3. [Svelte로 Todo List App 만들기(2) - 데이터 생성, 읽기, 갱신, 삭제(CRUD) Part.1](https://soulcactus.netlify.com/svelte/todo-list-2/)
+
+####
+
+- [DEMO](https://svelte-todo-list-demo.netlify.com/)
+- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
