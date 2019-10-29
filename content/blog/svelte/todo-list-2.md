@@ -25,7 +25,7 @@ category: 'svelte'
 <button type="button">추가</button>
 ```
 
-```javascript{10}
+```javascript{10, 16}
 // src/App.svelte
 
 <script>
@@ -41,7 +41,7 @@ category: 'svelte'
 <style lang="scss" src="./styles/global.scss"></style>
 
 <PageTemplate {logo} {title}>
-  <TodoInput />
+  <TodoInput {todoValue} />
   <TodoList />
 </PageTemplate>
 ```
@@ -73,7 +73,7 @@ category: 'svelte'
 
 ####
 
-```javascript{12-14}
+```javascript{12-14, 20}
 // src/App.svelte
 
 <script>
@@ -93,7 +93,7 @@ category: 'svelte'
 <style lang="scss" src="./styles/global.scss"></style>
 
 <PageTemplate {logo} {title}>
-  <TodoInput />
+  <TodoInput {todoValue} {handleKeyup} />
   <TodoList />
 </PageTemplate>
 ```
@@ -145,7 +145,7 @@ SVELTE에서 요소에 이벤트를 바인딩할 때는 on:eventname 패턴으�
 <button type="button">추가</button>
 ```
 
-SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으로 작성해야 합니다. 뷰의 v-model과 거의 동일한 방식입니다(양방향 바인딩).
+SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으로 작성해야 합니다. vue의 v-model과 거의 동일한 방식입니다(양방향 바인딩).
 
 이제 input 값이 변경될 때마다 todoValue 값이 업데이트됩니다. 상태값이 잘 업데이트되고 있는지 확인하기 위해 SVELTE Chrome Extension을 설치합니다.
 
@@ -198,7 +198,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 </ul>
 ```
 
-```javascript{11-28}
+```javascript{11-28, 39}
 // src/App.svelte
 
 <script>
@@ -236,8 +236,8 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 <style lang="scss" src="./styles/global.scss"></style>
 
 <PageTemplate {logo} {title}>
-  <TodoInput />
-  <TodoList />
+  <TodoInput {todoValue} {handleKeyup} />
+  <TodoList {todos} />
 </PageTemplate>
 ```
 
@@ -355,7 +355,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 
 ####
 
-```javascript{19-20, 22-29}
+```javascript{19, 21-29}
 // src/components/TodoItem.svelte
 
 <script>
@@ -375,8 +375,8 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
   <input
     type="checkbox"
     id={`todoCheck${todo.id}`}
-    checked={todo.done}
-    class="chk-form" />
+    class="chk-form"
+    checked={todo.done} />
   <label for={`todoCheck${todo.id}`} />
   {#if todo.done}
     <span class="done">
@@ -437,8 +437,8 @@ SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴�
   <input
     type="checkbox"
     id={`todoCheck${todo.id}`}
-    checked={todo.done}
-    class="chk-form" />
+    class="chk-form"
+    checked={todo.done} />
   <label for={`todoCheck${todo.id}`} />
   <span class:done={todo.done}>
     {todo.content}
@@ -458,6 +458,7 @@ SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴�
 1. [Svelte 설치하기(Quick Start)](https://soulcactus.netlify.com/svelte/start-svelte/)
 2. [Svelte로 Todo List App 만들기(1) - 레이아웃](https://soulcactus.netlify.com/svelte/todo-list-1/)
 3. [Svelte로 Todo List App 만들기(2) - 데이터 생성, 읽기, 갱신, 삭제(CRUD) Part.1](https://soulcactus.netlify.com/svelte/todo-list-2/)
+4. [Svelte로 Todo List App 만들기(3) - 데이터 생성, 읽기, 갱신, 삭제(CRUD) Part.2](https://soulcactus.netlify.com/svelte/todo-list-3/)
 
 ####
 
