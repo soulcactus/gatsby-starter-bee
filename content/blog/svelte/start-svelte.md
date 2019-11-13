@@ -10,7 +10,7 @@ category: 'svelte'
 
 이 포스트는 [Svelte](https://svelte.dev/) 공식문서를 참고했습니다.
 
-## 📁 REPL을 이용하여 설치
+## 📁 REPL을 이용해 설치
 
 - 먼저 [이곳](https://svelte.dev/repl/hello-world?version=3.12.1)에서 svelte-app.zip 파일을 다운로드합니다.
 
@@ -46,7 +46,7 @@ npm run dev
 
 ####
 
-## 📁 degit을 이용하여 설치
+## 📁 degit을 이용해 설치
 
 - 터미널에 다음과 같이 입력하여 새 svelte 프로젝트 디렉토리를 생성합니다.
 
