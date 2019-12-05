@@ -739,7 +739,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ## 💬 마치며
 
-기본적인 todo list app 만들기에 이어 store를 다루는 법도 알아봤습니다. 다음 포스트에서는 지금까지 만든 todo list app에 json-server를 붙여서 API를 이용한 CRUD을 다루도록 하겠습니다.
+기본적인 todo list app 만들기에 이어 store를 다루는 법도 알아봤습니다. 다음 포스트에서는 지금까지 만든 todo list app에 json-server를 붙여서 API를 이용한 CRUD를 다루도록 하겠습니다.
 
 1. [Svelte 설치하기(Quick Start)](https://soulcactus.netlify.com/svelte/start-svelte/)
 2. [Svelte로 Todo List App 만들기(1) - 레이아웃](https://soulcactus.netlify.com/svelte/todo-list-1/)
