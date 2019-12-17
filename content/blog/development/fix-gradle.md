@@ -10,7 +10,7 @@ category: 'development'
 
 처음에 발생한 에러는 JAVA_HOME 환경 변수를 갑자기 잡지 못하는 문제였는데요, JAVA를 삭제(...)하고 재설치 및 환경변수 재설정 등등을 수행해 해결했습니다. [이 포스트](https://dora-guide.com/java-jdk-environment-variables/)가 도움이 됐습니다. 저와 같은 문제를 겪고 계신 분은 저곳을 참고하시기 바랍니다.  
 
-JAVA 설정을 마치고 다시 명령을 실행했으나, 이번에는 gradle이 문제였습니다. 찾아보니 gradle 버전이 낮아 발생하는 문제였습니다. gralde 저장소에 [이슈](https://github.com/gradle/gradle/issues/8681)로 등록돼 있었습니다.
+JAVA 설정을 마치고 다시 명령을 실행했으나, 이번에는 gradle이 문제였습니다. 찾아보니 gradle 버전이 낮아 발생하는 에러였습니다. gralde 저장소에 [이슈](https://github.com/gradle/gradle/issues/8681)로 등록돼 있었습니다.
 
 ## 💥 문제
 
