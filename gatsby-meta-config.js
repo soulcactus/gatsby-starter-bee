@@ -5,7 +5,7 @@ module.exports = {
   introduction: `🌵 Front-End Developer`,
   siteUrl: `https://soulcactus.netlify.com`,
   social: {
-    twitter: ``,
+    twitter: `_soulcactus`,
     github: `soulcactus`,
     medium: ``,
     facebook: ``,
