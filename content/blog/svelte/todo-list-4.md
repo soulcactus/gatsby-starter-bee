@@ -14,7 +14,7 @@ category: 'svelte'
 
 ## 💎 store 생성
 
-- src 디렉토리에 store.js 파일을 생성합니다.
+-   src 디렉토리에 store.js 파일을 생성합니다.
 
 ```tree
 └─src
@@ -42,7 +42,7 @@ category: 'svelte'
 
 먼저 TodoInput.svelte 컴포넌트의 입력폼을 변경하면 업데이트되는 상태값인 todoValue를 store에서 관리하도록 하겠습니다.
 
-- 우선 writable을 import합니다.
+-   우선 writable을 import합니다.
 
 ####
 
@@ -53,14 +53,14 @@ category: 'svelte'
 ```javascript{3}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 ```
 
 자세한 사항은 [이곳](https://svelte.dev/docs#writable)의 writable을 참고하시기 바랍니다.
 
 ####
 
-- 그 다음 커스텀 스토어를 아래와 같이 생성합니다.
+-   그 다음 커스텀 스토어를 아래와 같이 생성합니다.
 
 ####
 
@@ -71,15 +71,15 @@ import { writable } from 'svelte/store'
 ```javascript{5-12}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 ```
 
@@ -87,26 +87,26 @@ function setTodoValue() {
 
 ####
 
-- 그 다음 todoValue를 export합니다.
+-   그 다음 todoValue를 export합니다.
 
 ```javascript{14}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
-export const todoValue = setTodoValue()
+export const todoValue = setTodoValue();
 ```
 
-- App.svelte를 수정합니다.
+-   App.svelte를 수정합니다.
 
 ```javascript{3-19}
 // src/App.svelte
@@ -117,7 +117,7 @@ export const todoValue = setTodoValue()
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
+  let title = 'TODO LIST';
 </script>
 
 <style lang="scss" src="./styles/global.scss">
@@ -134,103 +134,103 @@ export const todoValue = setTodoValue()
 
 ## 📝 todos
 
-- 먼저 initial state를 설정합니다.
+-   먼저 initial state를 설정합니다.
 
 ```javascript{5-21}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 const todoList = [
-  {
-    id: 0,
-    content: `첫 번째 할일`,
-    done: false,
-  },
-  {
-    id: 1,
-    content: `두 번째 할일`,
-    done: true,
-  },
-  {
-    id: 2,
-    content: `세 번째 할일`,
-    done: false,
-  },
-]
+    {
+        id: 0,
+        content: '첫 번째 할일',
+        done: false,
+    },
+    {
+        id: 1,
+        content: '두 번째 할일',
+        done: true,
+    },
+    {
+        id: 2,
+        content: '세 번째 할일',
+        done: false,
+    },
+];
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
-export const todoValue = setTodoValue()
+export const todoValue = setTodoValue();
 ```
 
-- todos 스토어를 생성하고 insert 액션타입과 리듀서를 정의합니다. (Svelte에서는 공식적으로 액션타입과 리듀서라는 용어를 사용하지 않지만 편의상 이렇게 설명하겠습니다.)
+-   todos 스토어를 생성하고 insert 액션타입과 리듀서를 정의합니다. (Svelte에서는 공식적으로 액션타입과 리듀서라는 용어를 사용하지 않지만 편의상 이렇게 설명하겠습니다.)
 
 ```javascript{32-55}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 const todoList = [
-  {
-    id: 0,
-    content: `첫 번째 할일`,
-    done: false,
-  },
-  {
-    id: 1,
-    content: `두 번째 할일`,
-    done: true,
-  },
-  {
-    id: 2,
-    content: `세 번째 할일`,
-    done: false,
-  },
-]
+    {
+        id: 0,
+        content: '첫 번째 할일',
+        done: false,
+    },
+    {
+        id: 1,
+        content: '두 번째 할일',
+        done: true,
+    },
+    {
+        id: 2,
+        content: '세 번째 할일',
+        done: false,
+    },
+];
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
 function setTodo() {
-  const { subscribe, update } = writable(todoList)
+    const { subscribe, update } = writable(todoList);
 
-  return {
-    subscribe,
-    insert: value =>
-      update(list => {
-        const newList = [...list]
-        let todoId
+    return {
+        subscribe,
+        insert: (value) =>
+            update((list) => {
+                const newList = [...list];
+                let todoId;
 
-        newList.length === 0
-          ? (todoId = -1)
-          : (todoId = newList[newList.length - 1][`id`])
+                newList.length === 0
+                    ? (todoId = -1)
+                    : (todoId = newList[newList.length - 1]['id']);
 
-        const newTodo = {
-          id: ++todoId,
-          content: value,
-          done: false,
-        }
+                const newTodo = {
+                    id: ++todoId,
+                    content: value,
+                    done: false,
+                };
 
-        return [...newList, newTodo]
-      }),
-  }
+                return [...newList, newTodo];
+            }),
+    };
 }
 
-export const todoValue = setTodoValue()
+export const todoValue = setTodoValue();
 ```
 
 insert를 설명하기에 앞서 지난 번에 작성했던 handleInsert 함수를 살펴보겠습니다.
@@ -241,19 +241,19 @@ insert를 설명하기에 앞서 지난 번에 작성했던 handleInsert 함수�
 /* ... */
 
 let handleInsert = () => {
-  if (todoValue) {
-    const newTodo = {
-      id: ++todoId,
-      content: todoValue,
-      done: false,
-    }
+    if (todoValue) {
+        const newTodo = {
+            id: ++todoId,
+            content: todoValue,
+            done: false,
+        };
 
-    todos[todos.length] = newTodo
-    todoValue = ``
-  } else {
-    alert(`내용을 입력해 주세요.`)
-  }
-}
+        todos[todos.length] = newTodo;
+        todoValue = '';
+    } else {
+        alert('내용을 입력해 주세요.');
+    }
+};
 
 /* ... */
 ```
@@ -275,75 +275,75 @@ let handleInsert = () => {
 
 ####
 
-- check 액션 타입과 리듀서를 정의합니다.
+-   check 액션 타입과 리듀서를 정의합니다.
 
 ```javascript{54-62}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 const todoList = [
-  {
-    id: 0,
-    content: `첫 번째 할일`,
-    done: false,
-  },
-  {
-    id: 1,
-    content: `두 번째 할일`,
-    done: true,
-  },
-  {
-    id: 2,
-    content: `세 번째 할일`,
-    done: false,
-  },
-]
+    {
+        id: 0,
+        content: '첫 번째 할일',
+        done: false,
+    },
+    {
+        id: 1,
+        content: '두 번째 할일',
+        done: true,
+    },
+    {
+        id: 2,
+        content: '세 번째 할일',
+        done: false,
+    },
+];
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
 function setTodo() {
-  const { subscribe, update } = writable(todoList)
+    const { subscribe, update } = writable(todoList);
 
-  return {
-    subscribe,
-    insert: value =>
-      update(list => {
-        const newList = [...list]
-        let todoId
+    return {
+        subscribe,
+        insert: (value) =>
+            update((list) => {
+                const newList = [...list];
+                let todoId;
 
-        newList.length === 0
-          ? (todoId = -1)
-          : (todoId = newList[newList.length - 1][`id`])
+                newList.length === 0
+                    ? (todoId = -1)
+                    : (todoId = newList[newList.length - 1]['id']);
 
-        const newTodo = {
-          id: ++todoId,
-          content: value,
-          done: false,
-        }
+                const newTodo = {
+                    id: ++todoId,
+                    content: value,
+                    done: false,
+                };
 
-        return [...newList, newTodo]
-      }),
-    check: id =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return [...newList, newTodo];
+            }),
+        check: (id) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        newList[index][`done`] = !newList[index][`done`]
+                newList[index]['done'] = !newList[index]['done'];
 
-        return newList
-      }),
-  }
+                return newList;
+            }),
+    };
 }
 
-export const todoValue = setTodoValue()
+export const todoValue = setTodoValue();
 ```
 
 마찬가지로 지난 번에 작성했던 handleCheck 함수를 거의 동일하게 옮겼습니다. (이하 생략)
@@ -354,203 +354,201 @@ export const todoValue = setTodoValue()
 /* ... */
 
 let handleCheck = (id, done) => {
-  const index = todos.findIndex(todo => todo.id === id)
+    const index = todos.findIndex((todo) => todo.id === id);
 
-  todos[index][`done`] = !done
-}
+    todos[index]['done'] = !done;
+};
 /* ... */
 ```
 
-- modify 액션 타입과 리듀서를 정의합니다.
+-   modify 액션 타입과 리듀서를 정의합니다.
 
 ```javascript{63-71}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 const todoList = [
-  {
-    id: 0,
-    content: `첫 번째 할일`,
-    done: false,
-  },
-  {
-    id: 1,
-    content: `두 번째 할일`,
-    done: true,
-  },
-  {
-    id: 2,
-    content: `세 번째 할일`,
-    done: false,
-  },
-]
+    {
+        id: 0,
+        content: '첫 번째 할일',
+        done: false,
+    },
+    {
+        id: 1,
+        content: '두 번째 할일',
+        done: true,
+    },
+    {
+        id: 2,
+        content: '세 번째 할일',
+        done: false,
+    },
+];
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
 function setTodo() {
-  const { subscribe, update } = writable(todoList)
+    const { subscribe, update } = writable(todoList);
 
-  return {
-    subscribe,
-    insert: value =>
-      update(list => {
-        const newList = [...list]
-        let todoId
+    return {
+        subscribe,
+        insert: (value) =>
+            update((list) => {
+                const newList = [...list];
+                let todoId;
 
-        newList.length === 0
-          ? (todoId = -1)
-          : (todoId = newList[newList.length - 1][`id`])
+                newList.length === 0
+                    ? (todoId = -1)
+                    : (todoId = newList[newList.length - 1]['id']);
 
-        const newTodo = {
-          id: ++todoId,
-          content: value,
-          done: false,
-        }
+                const newTodo = {
+                    id: ++todoId,
+                    content: value,
+                    done: false,
+                };
 
-        return [...newList, newTodo]
-      }),
-    check: id =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return [...newList, newTodo];
+            }),
+        check: (id) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        newList[index][`done`] = !newList[index][`done`]
+                newList[index]['done'] = !newList[index]['done'];
 
-        return newList
-      }),
-    modify: (id, text) =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return newList;
+            }),
+        modify: (id, text) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        newList[index][`content`] = text
+                newList[index]['content'] = text;
 
-        return newList
-      }),
-  }
+                return newList;
+            }),
+    };
 }
 
-export const todoValue = setTodoValue()
+export const todoValue = setTodoValue();
 ```
 
-- remove 액션 타입과 리듀서를 정의한 다음 todos를 export합니다.
+-   remove 액션 타입과 리듀서를 정의한 다음 todos를 export합니다.
 
 ```javascript{72-83, 88}
 // src/store.js
 
-import { writable } from 'svelte/store'
+import { writable } from 'svelte/store';
 
 const todoList = [
-  {
-    id: 0,
-    content: `첫 번째 할일`,
-    done: false,
-  },
-  {
-    id: 1,
-    content: `두 번째 할일`,
-    done: true,
-  },
-  {
-    id: 2,
-    content: `세 번째 할일`,
-    done: false,
-  },
-]
+    {
+        id: 0,
+        content: '첫 번째 할일',
+        done: false,
+    },
+    {
+        id: 1,
+        content: '두 번째 할일',
+        done: true,
+    },
+    {
+        id: 2,
+        content: '세 번째 할일',
+        done: false,
+    },
+];
 
 function setTodoValue() {
-  const { subscribe, set } = writable(``)
+    const { subscribe, set } = writable('');
 
-  return {
-    subscribe,
-    keyup: value => set(value),
-  }
+    return {
+        subscribe,
+        keyup: (value) => set(value),
+    };
 }
 
 function setTodo() {
-  const { subscribe, update } = writable(todoList)
+    const { subscribe, update } = writable(todoList);
 
-  return {
-    subscribe,
-    insert: value =>
-      update(list => {
-        const newList = [...list]
-        let todoId
+    return {
+        subscribe,
+        insert: (value) =>
+            update((list) => {
+                const newList = [...list];
+                let todoId;
 
-        newList.length === 0
-          ? (todoId = -1)
-          : (todoId = newList[newList.length - 1][`id`])
+                newList.length === 0
+                    ? (todoId = -1)
+                    : (todoId = newList[newList.length - 1]['id']);
 
-        const newTodo = {
-          id: ++todoId,
-          content: value,
-          done: false,
-        }
+                const newTodo = {
+                    id: ++todoId,
+                    content: value,
+                    done: false,
+                };
 
-        return [...newList, newTodo]
-      }),
-    check: id =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return [...newList, newTodo];
+            }),
+        check: (id) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        newList[index][`done`] = !newList[index][`done`]
+                newList[index]['done'] = !newList[index]['done'];
 
-        return newList
-      }),
-    modify: (id, text) =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return newList;
+            }),
+        modify: (id, text) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        newList[index][`content`] = text
+                newList[index]['content'] = text;
 
-        return newList
-      }),
-    remove: id =>
-      update(list => {
-        const newList = [...list]
-        const index = newList.findIndex(todo => todo[`id`] === id)
+                return newList;
+            }),
+        remove: (id) =>
+            update((list) => {
+                const newList = [...list];
+                const index = newList.findIndex((todo) => todo['id'] === id);
 
-        const newTodos = [
-          ...newList.slice(0, index),
-          ...newList.slice(index + 1, newList.length),
-        ]
+                const newTodos = [
+                    ...newList.slice(0, index),
+                    ...newList.slice(index + 1, newList.length),
+                ];
 
-        return newTodos
-      }),
-  }
+                return newTodos;
+            }),
+    };
 }
 
-export const todoValue = setTodoValue()
-export const todos = setTodo()
+export const todoValue = setTodoValue();
+export const todos = setTodo();
 ```
 
 스토어가 완성됐습니다.
 
 ## 📝 TodoInput 컴포넌트 : store 구독
 
-- script 부분에 props를 지우고 todos와 todoValue를 import합니다.
+-   script 부분에 props를 지우고 todos와 todoValue를 import합니다.
 
 ```javascript{4}
 // src/components/TodoInput.svelte
 
-<script>
-import {todos, todoValue} from "~/store.js";
-</script>
+<script>import {(todos, todoValue)} from "~/store.js";</script>
 
 /* ... */
 ```
 
-- 마크업을 다음과 같이 수정합니다.
+-   마크업을 다음과 같이 수정합니다.
 
 ```javascript{8-9}
 // src/components/TodoInput.svelte
@@ -569,7 +567,7 @@ import {todos, todoValue} from "~/store.js";
 
 ####
 
-- handleKeyup과 handleInsert 함수를 작성합니다.
+-   handleKeyup과 handleInsert 함수를 작성합니다.
 
 ```javascript{6-21}
 // src/components/TodoInput.svelte
@@ -580,9 +578,9 @@ import {todos, todoValue} from "~/store.js";
 const handleInsert = () => {
     if ($todoValue) {
       todos.insert($todoValue);
-      todoValue.keyup(``);
+      todoValue.keyup('');
     } else {
-      alert(`내용을 입력해 주세요.`);
+      alert('내용을 입력해 주세요.');
     }
   };
 
@@ -602,7 +600,7 @@ const handleKeyup = e => {
 
 ## 📝 TodoList 컴포넌트 : store 구독
 
-- 마찬가지로 script와 마크업을 수정합니다.
+-   마찬가지로 script와 마크업을 수정합니다.
 
 ```javascript{5, 15-17}
 // src/components/TodoList.svelte
@@ -627,7 +625,7 @@ const handleKeyup = e => {
 
 ## 📝 TodoItem 컴포넌트 : store 구독
 
-- script를 수정합니다.
+-   script를 수정합니다.
 
 ```javascript{5, 9-21}
 // src/components/TodoItem.svelte
@@ -639,17 +637,17 @@ const handleKeyup = e => {
   export let todo;
 
   const handleModify = (id, element) => {
-    const index = $todos.findIndex(todo => todo[`id`] === id);
+    const index = $todos.findIndex(todo => todo['id'] === id);
 
     const modify = function() {
-      element.removeAttribute(`contenteditable`);
+      element.removeAttribute('contenteditable');
       todos.modify(id, element.textContent);
-      element.removeEventListener(`blur`, modify, false);
+      element.removeEventListener('blur', modify, false);
     };
 
-    element.setAttribute(`contenteditable`, true);
+    element.setAttribute('contenteditable', true);
     element.focus();
-    element.addEventListener(`blur`, modify, false);
+    element.addEventListener('blur', modify, false);
   };
 
   /* ... */
@@ -660,7 +658,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 마크업을 수정합니다.
+-   마크업을 수정합니다.
 
 ```javascript{5-23}
 // src/components/TodoItem.svelte
@@ -668,23 +666,23 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 /* ... */
 
 <li>
-  <input
-    type="checkbox"
-    id={`todoCheck${todo[`id`]}`}
-    class="chk-form"
-    on:click={() => todos.check(todo[`id`])}
-    checked={todo[`done`]}
-  />
-  <label for={`todoCheck${todo[`id`]}`} />
-  <span
-    class:done={todo[`done`]}
-    on:dblclick={e => handleModify(todo[`id`], e.target)}
-  >
-    {todo[`content`]}
-  </span>
-  <button type="button" on:click={() => todos.remove(todo[`id`])}>
-    <img src={icon} alt="remove todo item" />
-  </button>
+    <input
+        type="checkbox"
+        id={`todoCheck${todo['id']}`}
+        class="chk-form"
+        on:click={() => todos.check(todo['id'])}
+        checked={todo['done']}
+    />
+    <label for={`todoCheck${todo['id']}`} />
+    <span
+        class:done={todo['done']}
+        on:dblclick={(e) => handleModify(todo['id'], e.target)}
+    >
+        {todo['content']}
+    </span>
+    <button type="button" on:click={() => todos.remove(todo['id'])}>
+        <img src={icon} alt="remove todo item" />
+    </button>
 </li>
 ```
 
@@ -694,7 +692,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 입력폼 업데이트를 확인합니다.
+-   입력폼 업데이트를 확인합니다.
 
 ####
 
@@ -703,7 +701,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 할일이 추가되는지 확인합니다.
+-   할일이 추가되는지 확인합니다.
 
 ####
 
@@ -712,7 +710,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 할일이 완료되는지 확인합니다.
+-   할일이 완료되는지 확인합니다.
 
 ####
 
@@ -721,7 +719,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 할일이 수정되는지 확인합니다.
+-   할일이 수정되는지 확인합니다.
 
 ####
 
@@ -730,7 +728,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- 할일이 삭제되는지 확인합니다.
+-   할일이 삭제되는지 확인합니다.
 
 ####
 
@@ -739,7 +737,7 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ## 💬 마치며
 
-기본적인 todo list app 만들기에 이어 store를 다루는 법도 알아봤습니다. 다음 포스트에서는 지금까지 만든 todo list app에 json-server를 붙여서 API를 이용한 CRUD를 다루도록 하겠습니다.
+기본적인 todo list app 만들기에 이어 store를 다루는 법도 알아봤습니다.
 
 1. [Svelte 설치하기(Quick Start)](https://soulcactus.netlify.com/svelte/start-svelte/)
 2. [Svelte로 Todo List App 만들기(1) - 레이아웃](https://soulcactus.netlify.com/svelte/todo-list-1/)
@@ -749,5 +747,5 @@ TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 
 
 ####
 
-- [DEMO](https://svelte-todo-list-demo.netlify.com/)
-- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
+-   [DEMO](https://svelte-todo-list-demo.netlify.com/)
+-   [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)

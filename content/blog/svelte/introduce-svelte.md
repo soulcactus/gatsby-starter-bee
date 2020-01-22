@@ -20,9 +20,9 @@ Svelte는 [React](https://reactjs.org/), [Vue](https://kr.vuejs.org/)와 같은 
 
 ## 💡 SvelteJS 특징
 
-- 기존에 알고 있는 HTML, CSS, JavaScript를 사용해 create-react-app과 같은 보일러플레이트에서 자유로운 컴포넌트를 구축할 수 있습니다.
-- React, Vue와 달리 virtual DOM을 사용하지 않고, 코드를 작고 framework-less한 vanilla JavaScript로 컴파일합니다.
-- 복잡한 상태관리 라이브러리가 필요하지 않습니다.
+-   기존에 알고 있는 HTML, CSS, JavaScript를 사용해 create-react-app과 같은 보일러플레이트에서 자유로운 컴포넌트를 구축할 수 있습니다.
+-   React, Vue와 달리 virtual DOM을 사용하지 않고, 코드를 작고 framework-less한 vanilla JavaScript로 컴파일합니다.
+-   복잡한 상태관리 라이브러리가 필요하지 않습니다.
 
 ## ✨ SvelteJS 전망
 
@@ -40,31 +40,31 @@ Svelte는 [React](https://reactjs.org/), [Vue](https://kr.vuejs.org/)와 같은 
 위와 같이 input 값을 처리하는 기능을 React를 이용해 구현하면 아래와 같습니다.
 
 ```javascript
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 export default () => {
-  const [a, setA] = useState(1)
-  const [b, setB] = useState(2)
+    const [a, setA] = useState(1);
+    const [b, setB] = useState(2);
 
-  function handleChangeA(event) {
-    setA(+event.target.value)
-  }
+    function handleChangeA(event) {
+        setA(+event.target.value);
+    }
 
-  function handleChangeB(event) {
-    setB(+event.target.value)
-  }
+    function handleChangeB(event) {
+        setB(+event.target.value);
+    }
 
-  return (
-    <div>
-      <input type="number" value={a} onChange={handleChangeA} />
-      <input type="number" value={b} onChange={handleChangeB} />
+    return (
+        <div>
+            <input type="number" value={a} onChange={handleChangeA} />
+            <input type="number" value={b} onChange={handleChangeB} />
 
-      <p>
-        {a} + {b} = {a + b}
-      </p>
-    </div>
-  )
-}
+            <p>
+                {a} + {b} = {a + b}
+            </p>
+        </div>
+    );
+};
 ```
 
 다음은 Vue를 이용해 구현한 예제입니다.

@@ -12,7 +12,7 @@ category: 'svelte'
 
 ## 📁 REPL을 이용해 설치
 
-- 먼저 [이곳](https://svelte.dev/repl/hello-world?version=3.12.1)에서 svelte-app.zip 파일을 다운로드합니다.
+-   먼저 [이곳](https://svelte.dev/repl/hello-world?version=3.12.1)에서 svelte-app.zip 파일을 다운로드합니다.
 
 ####
 
@@ -20,25 +20,25 @@ category: 'svelte'
 
 ####
 
-- 압축을 해제한 뒤 터미널에서 해당 디렉토리로 이동합니다.
+-   압축을 해제한 뒤 터미널에서 해당 디렉토리로 이동합니다.
 
 ```bash
 cd /path/to/svelte-app
 ```
 
-- 패키지 파일을 설치합니다.
+-   패키지 파일을 설치합니다.
 
 ```bash
 npm install
 ```
 
-- 설치가 완료되면 아래의 명령어를 통해 개발모드를 실행합니다.
+-   설치가 완료되면 아래의 명령어를 통해 개발모드를 실행합니다.
 
 ```bash
 npm run dev
 ```
 
-- localhost:5000에 접속하면 아래와 같은 화면을 확인할 수 있습니다.
+-   localhost:5000에 접속하면 아래와 같은 화면을 확인할 수 있습니다.
 
 ####
 
@@ -48,13 +48,13 @@ npm run dev
 
 ## 📁 degit을 이용해 설치
 
-- 터미널에 다음과 같이 입력하여 새 svelte 프로젝트 디렉토리를 생성합니다.
+-   터미널에 다음과 같이 입력하여 새 svelte 프로젝트 디렉토리를 생성합니다.
 
 ```bash
 npx degit sveltejs/template my-svelte-project
 ```
 
-- 마찬가지로 해당 디렉토리로 이동해 패키지 파일을 설치한 뒤 개발모드를 실행합니다.
+-   마찬가지로 해당 디렉토리로 이동해 패키지 파일을 설치한 뒤 개발모드를 실행합니다.
 
 ```bash
 cd my-svelte-project
@@ -73,5 +73,5 @@ npm run dev
 
 ####
 
-- [DEMO](https://svelte-todo-list-demo.netlify.com/)
-- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
+-   [DEMO](https://svelte-todo-list-demo.netlify.com/)
+-   [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)

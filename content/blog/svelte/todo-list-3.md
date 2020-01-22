@@ -8,7 +8,7 @@ category: 'svelte'
 
 ## 📝 TodoInput 컴포넌트 : 새로운 할일 추가(Create)
 
-- App.svelte에서 todos의 마지막 item의 id를 todoId 변수에 할당합니다.
+-   App.svelte에서 todos의 마지막 item의 id를 todoId 변수에 할당합니다.
 
 ```javascript{29}
 // src/App.svelte
@@ -19,27 +19,27 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
 
-  let todoId = todos[todos.length - 1][`id`]; // todos의 마지막 item의 id
+  let todoId = todos[todos.length - 1]['id']; // todos의 마지막 item의 id
 
   let handleKeyup = e => {
     todoValue = e.target.value; // keyup 이벤트 발생시 todoValue 값을 업데이트
@@ -58,7 +58,7 @@ category: 'svelte'
 
 ####
 
-- handleInsert 핸들러를 작성한 뒤 TodoInput 컴포넌트에 바인딩합니다.
+-   handleInsert 핸들러를 작성한 뒤 TodoInput 컴포넌트에 바인딩합니다.
 
 ####
 
@@ -75,27 +75,27 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
 
-  let todoId = todos[todos.length - 1][`id`]; // todos의 마지막 item의 id
+  let todoId = todos[todos.length - 1]['id']; // todos의 마지막 item의 id
 
   let handleInsert = () => {
     if (todoValue) {
@@ -106,9 +106,9 @@ category: 'svelte'
       };
 
       todos[todos.length] = newTodo;
-      todoValue = ``;
+      todoValue = '';
     } else {
-      alert(`내용을 입력해 주세요.`);
+      alert('내용을 입력해 주세요.');
     }
   };
 
@@ -149,7 +149,7 @@ category: 'svelte'
 
 ### handleKeyup
 
-- Enter key를 이용해 일정을 추가할 수 있도록 handleKeyup을 수정합니다.
+-   Enter key를 이용해 일정을 추가할 수 있도록 handleKeyup을 수정합니다.
 
 ```javascript{8-10}
 // src/App.svelte
@@ -182,7 +182,7 @@ category: 'svelte'
 
 ####
 
-- App.svelte에서 handleCheck 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
+-   App.svelte에서 handleCheck 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
 
 ####
 
@@ -195,32 +195,32 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
 
-  let todoId = todos[todos.length - 1][`id`]; // todos의 마지막 item의 id
+  let todoId = todos[todos.length - 1]['id']; // todos의 마지막 item의 id
 
   let handleCheck = (id, done) => {
     const index = todos.findIndex(todo => todo.id === id);
 
-    todos[index][`done`] = !done;
+    todos[index]['done'] = !done;
   };
 
   let handleInsert = () => {
@@ -232,9 +232,9 @@ category: 'svelte'
       };
 
       todos[todos.length] = newTodo;
-      todoValue = ``;
+      todoValue = '';
     } else {
-      alert(`내용을 입력해 주세요.`);
+      alert('내용을 입력해 주세요.');
     }
   };
 
@@ -325,7 +325,7 @@ category: 'svelte'
 
 ####
 
-- App.svelte에서 handleModify 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
+-   App.svelte에서 handleModify 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
 
 ####
 
@@ -342,32 +342,32 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
 
-  let todoId = todos[todos.length - 1][`id`]; // todos의 마지막 item의 id
+  let todoId = todos[todos.length - 1]['id']; // todos의 마지막 item의 id
 
   let handleCheck = (id, done) => {
     const index = todos.findIndex(todo => todo.id === id);
 
-    todos[index][`done`] = !done;
+    todos[index]['done'] = !done;
   };
 
   let handleInsert = () => {
@@ -379,9 +379,9 @@ category: 'svelte'
       };
 
       todos[todos.length] = newTodo;
-      todoValue = ``;
+      todoValue = '';
     } else {
-      alert(`내용을 입력해 주세요.`);
+      alert('내용을 입력해 주세요.');
     }
   };
 
@@ -394,14 +394,14 @@ category: 'svelte'
     const index = todos.findIndex(todo => todo.id === id);
 
     const modify = function() {
-      element.removeAttribute(`contenteditable`);
-      todos[index][`content`] = element.textContent;
-      element.removeEventListener(`blur`, modify, false);
+      element.removeAttribute('contenteditable');
+      todos[index]['content'] = element.textContent;
+      element.removeEventListener('blur', modify, false);
     };
 
-    element.setAttribute(`contenteditable`, true);
+    element.setAttribute('contenteditable', true);
     element.focus();
-    element.addEventListener(`blur`, modify, false);
+    element.addEventListener('blur', modify, false);
   };
 </script>
 
@@ -484,7 +484,7 @@ category: 'svelte'
 
 ### handleRemove
 
-- App.svelte에서 handleRemove 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
+-   App.svelte에서 handleRemove 핸들러를 작성한 뒤 TodoItem 컴포넌트에 바인딩합니다.
 
 ```javascript{71-80, 87}
 // src/App.svelte
@@ -495,32 +495,32 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
 
-  let todoId = todos[todos.length - 1][`id`]; // todos의 마지막 item의 id
+  let todoId = todos[todos.length - 1]['id']; // todos의 마지막 item의 id
 
   let handleCheck = (id, done) => {
     const index = todos.findIndex(todo => todo.id === id);
 
-    todos[index][`done`] = !done;
+    todos[index]['done'] = !done;
   };
 
   let handleInsert = () => {
@@ -532,9 +532,9 @@ category: 'svelte'
       };
 
       todos[todos.length] = newTodo;
-      todoValue = ``;
+      todoValue = '';
     } else {
-      alert(`내용을 입력해 주세요.`);
+      alert('내용을 입력해 주세요.');
     }
   };
 
@@ -547,14 +547,14 @@ category: 'svelte'
     const index = todos.findIndex(todo => todo.id === id);
 
     const modify = function() {
-      element.removeAttribute(`contenteditable`);
-      todos[index][`content`] = element.textContent;
-      element.removeEventListener(`blur`, modify, false);
+      element.removeAttribute('contenteditable');
+      todos[index]['content'] = element.textContent;
+      element.removeEventListener('blur', modify, false);
     };
 
-    element.setAttribute(`contenteditable`, true);
+    element.setAttribute('contenteditable', true);
     element.focus();
-    element.addEventListener(`blur`, modify, false);
+    element.addEventListener('blur', modify, false);
   };
 
   let handleRemove = id => {
@@ -656,5 +656,5 @@ category: 'svelte'
 
 ####
 
-- [DEMO](https://svelte-todo-list-demo.netlify.com/)
-- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
+-   [DEMO](https://svelte-todo-list-demo.netlify.com/)
+-   [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)

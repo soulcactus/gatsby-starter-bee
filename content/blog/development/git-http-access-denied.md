@@ -14,7 +14,7 @@ Git: remote: HTTP Basic: Access denied
 
 ## ❗️ 해결
 
-- 자격 증명 관리자를 실행합니다.
+-   자격 증명 관리자를 실행합니다.
 
 ####
 
@@ -22,7 +22,7 @@ Git: remote: HTTP Basic: Access denied
 
 ####
 
-- Windows 자격 증명을 선택합니다.
+-   Windows 자격 증명을 선택합니다.
 
 ####
 
@@ -30,7 +30,7 @@ Git: remote: HTTP Basic: Access denied
 
 ####
 
-- 해당 Repository의 URL을 선택하고 편집 버튼을 누릅니다.
+-   해당 Repository의 URL을 선택하고 편집 버튼을 누릅니다.
 
 ####
 
@@ -38,7 +38,7 @@ Git: remote: HTTP Basic: Access denied
 
 ####
 
-- 사용자 이름과 암호를 재설정합니다.
+-   사용자 이름과 암호를 재설정합니다.
 
 ####
 

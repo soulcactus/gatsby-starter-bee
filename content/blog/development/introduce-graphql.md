@@ -14,10 +14,10 @@ category: 'development'
 
 최근 [노마드 코더](https://academy.nomadcoders.co)에서 GraphQL 관련 강의인 <q>[GraphQL로 영화 API 만들기](https://academy.nomadcoders.co/courses/enrolled/357405)</q>와 <q>[GraphQL로 영화 웹 앱 만들기](https://academy.nomadcoders.co/courses/enrolled/364948)</q>를 수강했습니다. 사실, 호기심 외에 별다른 학습 계기가 있던 것은 아닙니다. 그래도 간략하게 이유를 꼽자면,
 
-- 뭔진 모르겠지만 여기저기서 핫(?)하다.
-- REST API 및 Redux를 대체할 수 있다는 소문(?)이 있다.
-- GatsbyJS에 탑재(?)돼 있다.
-- Facebook에서 만들었다.(중요)
+-   뭔진 모르겠지만 여기저기서 핫(?)하다.
+-   REST API 및 Redux를 대체할 수 있다는 소문(?)이 있다.
+-   GatsbyJS에 탑재(?)돼 있다.
+-   Facebook에서 만들었다.(중요)
 
 ## 💎 GraphQL이란?
 
@@ -25,10 +25,10 @@ category: 'development'
 
 ## 💡 GraphQL 특징
 
-- GraphQL API는 엔드포인트가 아닌 타입과 필드로 구성됩니다.
-- 스키마에 새로운 필드와 타입을 추가하는 것만으로 기존 쿼리에 영향을 주지 않고 단일 버전의 API를 사용할 수 있습니다.
-- REST API의 OverFetching 및 UnderFetching 문제를 해결할 수 있습니다.
-- REST API의 GET, POST, DELETE, PUT 메소드 대신 Query, Mutation 통해 쿼리합니다.(URL이 필요하지 않습니다.)
+-   GraphQL API는 엔드포인트가 아닌 타입과 필드로 구성됩니다.
+-   스키마에 새로운 필드와 타입을 추가하는 것만으로 기존 쿼리에 영향을 주지 않고 단일 버전의 API를 사용할 수 있습니다.
+-   REST API의 OverFetching 및 UnderFetching 문제를 해결할 수 있습니다.
+-   REST API의 GET, POST, DELETE, PUT 메소드 대신 Query, Mutation 통해 쿼리합니다.(URL이 필요하지 않습니다.)
 
 ## 📝 사용기
 

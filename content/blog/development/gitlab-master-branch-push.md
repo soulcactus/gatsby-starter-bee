@@ -24,8 +24,8 @@ error: failed to push some refs to
 
 Gitlab 설정을 통해 간단히 해결할 수 있습니다.
 
-- 해당 Gitlab 프로젝트의 설정 > 저장소로 접속합니다.
-- Protected Branches를 선택합니다.
+-   해당 Gitlab 프로젝트의 설정 > 저장소로 접속합니다.
+-   Protected Branches를 선택합니다.
 
 ####
 
@@ -33,7 +33,7 @@ Gitlab 설정을 통해 간단히 해결할 수 있습니다.
 
 ####
 
-- Allow to merge / Allow to push를 "Developers + Maintainers"로 수정합니다.
+-   Allow to merge / Allow to push를 "Developers + Maintainers"로 수정합니다.
 
 ####
 

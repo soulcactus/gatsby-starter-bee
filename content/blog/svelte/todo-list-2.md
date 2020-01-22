@@ -8,7 +8,7 @@ category: 'svelte'
 
 ## 📝 TodoInput 컴포넌트 : input 상태 관리(Update)
 
-- TodoInput 컴포넌트에서 prop을 정의하고 App.svelte에서 initial state를 할당합니다.
+-   TodoInput 컴포넌트에서 prop을 정의하고 App.svelte에서 initial state를 할당합니다.
 
 ```javascript{3-5}
 // src/components/TodoInput.svelte
@@ -34,8 +34,8 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
 </script>
 
 <style lang="scss" src="./styles/global.scss"></style>
@@ -46,7 +46,7 @@ category: 'svelte'
 </PageTemplate>
 ```
 
-- input 값 변경 이벤트 핸들러와, 추가 버튼 클릭 이벤트 핸들러도 미리 정의합니다.
+-   input 값 변경 이벤트 핸들러와, 추가 버튼 클릭 이벤트 핸들러도 미리 정의합니다.
 
 ```javascript{5-6}
 // src/components/TodoInput.svelte
@@ -69,7 +69,7 @@ category: 'svelte'
 
 ####
 
-- App.svelte에서 handleKeyup 핸들러를 작성한 뒤 TodoInput 컴포넌트에 바인딩합니다.
+-   App.svelte에서 handleKeyup 핸들러를 작성한 뒤 TodoInput 컴포넌트에 바인딩합니다.
 
 ####
 
@@ -82,8 +82,8 @@ category: 'svelte'
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
 
   let handleKeyup = e => {
     todoValue = e.target.value; // keyup 이벤트 발생시 todoValue 값을 업데이트
@@ -121,7 +121,7 @@ category: 'svelte'
 
 SVELTE에서 요소에 이벤트를 바인딩할 때는 on:eventname 패턴으로 작성해야 합니다.
 
-- 부모 컴포넌트의 상태값을 변경하기 위해 요소에 todoValue를 직접 바인딩합니다.
+-   부모 컴포넌트의 상태값을 변경하기 위해 요소에 todoValue를 직접 바인딩합니다.
 
 ```javascript{16}
 // src/components/TodoInput.svelte
@@ -153,7 +153,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 
 ####
 
-- [이곳](https://chrome.google.com/webstore/detail/svelte-devtools/ckolcbmkjpjmangdbmnkpjigpkddpogn)에서 설치합니다.
+-   [이곳](https://chrome.google.com/webstore/detail/svelte-devtools/ckolcbmkjpjmangdbmnkpjigpkddpogn)에서 설치합니다.
 
 ####
 
@@ -161,7 +161,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 
 ####
 
-- 개발자 도구를 열어 상태값을 확인합니다.
+-   개발자 도구를 열어 상태값을 확인합니다.
 
 ####
 
@@ -172,7 +172,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 
 ## 📖 ToDoList/ToDoItem 컴포넌트 : 할일 목록 불러오기(Read)
 
-- TodoList 컴포넌트에서 prop을 정의하고 App.svelte에서 initial state를 할당합니다.
+-   TodoList 컴포넌트에서 prop을 정의하고 App.svelte에서 initial state를 할당합니다.
 
 ####
 
@@ -207,23 +207,23 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
-  let todoValue = ``;
+  let title = 'TODO LIST';
+  let todoValue = '';
 
   let todos = [
     {
       id: 0,
-      content: `첫 번째 할일`,
+      content: '첫 번째 할일',
       done: false
     },
     {
       id: 1,
-      content: `두 번째 할일`,
+      content: '두 번째 할일',
       done: true
     },
     {
       id: 2,
-      content: `세 번째 할일`,
+      content: '세 번째 할일',
       done: false
     }
   ];
@@ -241,7 +241,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 </PageTemplate>
 ```
 
-- input 값 체크 이벤트 핸들러와, 아이템 삭제, 수정 이벤트 핸들러도 미리 정의합니다.
+-   input 값 체크 이벤트 핸들러와, 아이템 삭제, 수정 이벤트 핸들러도 미리 정의합니다.
 
 ```javascript{7-9}
 // src/components/TodoList.svelte
@@ -264,7 +264,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 </ul>
 ```
 
-- 그 다음 TodoItem 컴포넌트에 prop을 전달합니다.
+-   그 다음 TodoItem 컴포넌트에 prop을 전달합니다.
 
 ```javascript{17-19}
 // src/components/TodoList.svelte
@@ -291,7 +291,7 @@ SVELTE에서 요소에 상태값을 바인딩할 때는 bind:property 패턴으�
 
 SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패턴은 아래와 같습니다.
 
-- {#each expression as name}...{/each}
+-   {#each expression as name}...{/each}
 
 ```javascript
 {#each items as item}
@@ -299,7 +299,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 {/each}
 ```
 
-- {#each expression as name, index}...{/each}
+-   {#each expression as name, index}...{/each}
 
 ```javascript
 {#each items as item, i}
@@ -307,7 +307,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 {/each}
 ```
 
-- {#each expression as name}...{:else}...{/each}
+-   {#each expression as name}...{:else}...{/each}
 
 ```javascript
 {#each todos as todo}
@@ -319,7 +319,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 
 자세한 사항은 [이곳](https://svelte.dev/docs#each)의 {#each ...}를 참고하시기 바랍니다.
 
-- TodoItem 컴포넌트에도 동일하게 props를 정의합니다.
+-   TodoItem 컴포넌트에도 동일하게 props를 정의합니다.
 
 ```javascript{6-9}
 // src/components/TodoItem.svelte
@@ -347,7 +347,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 </li>
 ```
 
-- 받아온 todo 데이터를 적용합니다.
+-   받아온 todo 데이터를 적용합니다.
 
 ####
 
@@ -393,7 +393,7 @@ SVELTE에서 반복문을 작성할 때는 {#each ...}를 사용합니다. 패�
 
 SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴은 아래와 같습니다.
 
-- {#if expression}...{/if}
+-   {#if expression}...{/if}
 
 ```javascript
 {#if answer === 42}
@@ -401,7 +401,7 @@ SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴�
 {/if}
 ```
 
-- {#if expression}...{:else if expression}...{/if}
+-   {#if expression}...{:else if expression}...{/if}
 
 ```javascript
 {#if porridge.temperature > 100}
@@ -415,7 +415,7 @@ SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴�
 
 자세한 사항은 [이곳](https://svelte.dev/docs#if)의 {#if ...}를 참고하시기 바랍니다.
 
-- 참고로 TodoItem 컴포넌트의 조건문은 아래와 같은 방법으로도 작성 가능합니다.
+-   참고로 TodoItem 컴포넌트의 조건문은 아래와 같은 방법으로도 작성 가능합니다.
 
 ```javascript{23-25}
 // src/components/TodoItem.svelte
@@ -463,5 +463,5 @@ SVELTE에서 조건문을 작성할 때는 {#if ...}를 사용합니다. 패턴�
 
 ####
 
-- [DEMO](https://svelte-todo-list-demo.netlify.com/)
-- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
+-   [DEMO](https://svelte-todo-list-demo.netlify.com/)
+-   [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)

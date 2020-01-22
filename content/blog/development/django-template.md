@@ -10,13 +10,13 @@ Django 사용 중 아래와 같이 템플릿 코드를 반복해야 하는 경�
 
 ```html
 <ul>
-  <li option-value="1">1번째 아이템</li>
-  <li option-value="2">2번째 아이템</li>
-  <li option-value="3">3번째 아이템</li>
-  <li option-value="4">4번째 아이템</li>
-  <li option-value="5">5번째 아이템</li>
-  /* ... */
-  <li option-value="100">100번째 아이템</li>
+    <li option-value="1">1번째 아이템</li>
+    <li option-value="2">2번째 아이템</li>
+    <li option-value="3">3번째 아이템</li>
+    <li option-value="4">4번째 아이템</li>
+    <li option-value="5">5번째 아이템</li>
+    /* ... */
+    <li option-value="100">100번째 아이템</li>
 </ul>
 ```
 
@@ -26,8 +26,10 @@ Django 사용 중 아래와 같이 템플릿 코드를 반복해야 하는 경�
 
 ```html
 <ul>
-  {% for i in "x"|rjust:"100" %}
-  <li option-value="{{ forloop.counter }}">{{ forloop.counter }}번째 아이템</li>
-  {% endfor %}
+    {% for i in "x"|rjust:"100" %}
+    <li option-value="{{ forloop.counter }}">
+        {{ forloop.counter }}번째 아이템
+    </li>
+    {% endfor %}
 </ul>
 ```

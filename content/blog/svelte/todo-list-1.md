@@ -47,7 +47,7 @@ PostCSS보다 Sass를 선호하기 때문에 이번 튜토리얼에서도 Sass�
 
 ####
 
-- 먼저 node-sass와 svelte-preprocess를 설치합니다.
+-   먼저 node-sass와 svelte-preprocess를 설치합니다.
 
 ####
 
@@ -59,7 +59,7 @@ PostCSS보다 Sass를 선호하기 때문에 이번 튜토리얼에서도 Sass�
 npm i node-sass svelte-preprocess
 ```
 
-- 그 다음 rollup.config.js에 설정을 추가합니다.
+-   그 다음 rollup.config.js에 설정을 추가합니다.
 
 ```javascript{4, 12}
 // rollup.config.js
@@ -84,7 +84,7 @@ export default {
 
 ####
 
-- styles 디렉토리 생성 및 modules.scss 파일을 추가합니다.
+-   styles 디렉토리 생성 및 modules.scss 파일을 추가합니다.
 
 ####
 
@@ -96,66 +96,66 @@ export default {
 // src/styles/modules.scss
 
 @mixin size($width, $height) {
-  width: $width;
-  height: $height;
+    width: $width;
+    height: $height;
 }
 
 @mixin bg-img($url, $size) {
-  background-image: url($url);
-  background-repeat: no-repeat;
-  background-size: $size;
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: $size;
 }
 
 @mixin ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 @mixin space-between($wrap: wrap) {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: $wrap;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: $wrap;
 }
 
 @mixin flex-start($wrap: wrap) {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: $wrap;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: $wrap;
 }
 
 @mixin center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin align-center($position: absolute) {
-  position: $position;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @mixin for-size($size) {
-  @if $size == mobile-portrait {
-    @media (max-width: 575.98px) {
-      @content;
+    @if $size == mobile-portrait {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    } @else if $size == mobile-landscape {
+        @media (max-width: 767.98px) {
+            @content;
+        }
+    } @else if $size == tablet-portrait {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    } @else if $size == tablet-landscape {
+        @media (max-width: 1199.98px) {
+            @content;
+        }
     }
-  } @else if $size == mobile-landscape {
-    @media (max-width: 767.98px) {
-      @content;
-    }
-  } @else if $size == tablet-portrait {
-    @media (max-width: 991.98px) {
-      @content;
-    }
-  } @else if $size == tablet-landscape {
-    @media (max-width: 1199.98px) {
-      @content;
-    }
-  }
 }
 ```
 
@@ -163,7 +163,7 @@ export default {
 
 ####
 
-- variables.scss 파일을 추가합니다.
+-   variables.scss 파일을 추가합니다.
 
 ####
 
@@ -196,7 +196,7 @@ $placeholder-color: #ccc;
 
 ####
 
-- global.scss 파일을 추가합니다.
+-   global.scss 파일을 추가합니다.
 
 ####
 
@@ -211,23 +211,23 @@ $placeholder-color: #ccc;
 @import './styles/variables.scss';
 
 :global() {
-  html {
-    font-size: 62.5%;
-  }
+    html {
+        font-size: 62.5%;
+    }
 
-  body {
-    background: $body-background-color;
-    font-size: 1.4rem;
-    color: $body-text-color;
-  }
+    body {
+        background: $body-background-color;
+        font-size: 1.4rem;
+        color: $body-text-color;
+    }
 
-  div {
-    box-sizing: border-box;
-  }
+    div {
+        box-sizing: border-box;
+    }
 
-  li {
-    list-style: none;
-  }
+    li {
+        list-style: none;
+    }
 }
 ```
 
@@ -235,17 +235,17 @@ SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용�
 
 ```scss
 :global(body) {
-  margin: 0;
+    margin: 0;
 }
 
 :global() {
-  body {
-    margin: 0;
-  }
+    body {
+        margin: 0;
+    }
 }
 ```
 
-- App.svelte에서 기존 style 태그에 global.scss를 적용합니다.
+-   App.svelte에서 기존 style 태그에 global.scss를 적용합니다.
 
 ```javascript{4}
 // src/App.svelte
@@ -263,7 +263,7 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 ####
 
-- components 디렉토리를 생성하고 PageTemplate.svelte 파일을 추가합니다.
+-   components 디렉토리를 생성하고 PageTemplate.svelte 파일을 추가합니다.
 
 ####
 
@@ -285,7 +285,7 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 마크업 구조는 위와 같습니다. slot은 자식 컴포넌트를 받아서 렌더링하고 싶을 때 사용합니다. vue 등에서도 지원하는 방식입니다.
 
-- 스타일을 추가합니다.
+-   스타일을 추가합니다.
 
 ```javascript{3-29}
 // src/components/PageTemplate.svelte
@@ -329,7 +329,7 @@ scss를 사용하려면 보시는 바와 같이 style 태그에 lang="scss" 속�
 
 variables.scss 파일을 import하고 스타일을 작성했습니다. <b>이때, h1과 img, div 태그에 적용된 스타일은 컴포넌트 내부의 h1과 img, div 태그에만 자동으로 적용됩니다. 전역으로 적용되지 않습니다.</b>
 
-- props를 설정한 다음 적용합니다.
+-   props를 설정한 다음 적용합니다.
 
 ####
 
@@ -364,7 +364,7 @@ SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니�
 
 ####
 
-- TodoInput.svelte 파일을 추가하고 스타일과 마크업을 작성합니다.
+-   TodoInput.svelte 파일을 추가하고 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoInput.svelte
@@ -414,7 +414,7 @@ SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니�
 
 ####
 
-- TodoItem.svelte 파일을 추가하고 icon을 import한 다음, 스타일과 마크업을 작성합니다.
+-   TodoItem.svelte 파일을 추가하고 icon을 import한 다음, 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoItem.svelte
@@ -531,13 +531,13 @@ SVELTE에서 component prop을 정의하기 위해서는 export를 사용합니�
 
 script 부분에 두 가지 점이 눈에 띄실 텐데요, 하나는 ~를 이용해 절대경로로 import한 것, 두번째는 svg 확장자를 사용한 것입니다.
 
-- 먼저 절대경로로 import하기 위해 rollup-plugin-alias를 설치합니다.
+-   먼저 절대경로로 import하기 위해 rollup-plugin-alias를 설치합니다.
 
 ```bash
 npm i rollup-plugin-alias
 ```
 
-- 그 다음 rollup.config.js에 설정을 추가합니다.
+-   그 다음 rollup.config.js에 설정을 추가합니다.
 
 ```javascript{4-5,  12-15}
 // rollup.config.js
@@ -559,13 +559,13 @@ export default {
 }
 ```
 
-- 다음으로 svg 파일을 import하기 위해 rollup-plugin-svg을 설치합니다.
+-   다음으로 svg 파일을 import하기 위해 rollup-plugin-svg을 설치합니다.
 
 ```bash
 npm i rollup-plugin-svg
 ```
 
-- 그 다음 rollup.config.js에 설정을 추가합니다.
+-   그 다음 rollup.config.js에 설정을 추가합니다.
 
 ```javascript{4, 11-13}
 // rollup.config.js
@@ -601,7 +601,7 @@ document.body.appendChild( logo )
 
 ####
 
-- TodoList.svelte 파일을 추가하고 TodoItem 컴포넌트를 import한 다음, 스타일과 마크업을 작성합니다.
+-   TodoList.svelte 파일을 추가하고 TodoItem 컴포넌트를 import한 다음, 스타일과 마크업을 작성합니다.
 
 ```javascript
 // src/components/TodoList.svelte
@@ -625,7 +625,7 @@ document.body.appendChild( logo )
 
 ####
 
-- 마지막으로 App.svelte 파일을 수정하고 PageTemplate 컴포넌트에 props를 전달합니다.
+-   마지막으로 App.svelte 파일을 수정하고 PageTemplate 컴포넌트에 props를 전달합니다.
 
 ```javascript{3-10, 14-17}
 // src/App.svelte
@@ -636,7 +636,7 @@ document.body.appendChild( logo )
   import TodoInput from "~/components/TodoInput.svelte";
   import TodoList from "~/components/TodoList.svelte";
 
-  let title = `TODO LIST`;
+  let title = 'TODO LIST';
 </script>
 
 <style lang="scss" src="./styles/global.scss"></style>
@@ -659,5 +659,5 @@ document.body.appendChild( logo )
 
 ####
 
-- [DEMO](https://svelte-todo-list-demo.netlify.com/)
-- [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)
+-   [DEMO](https://svelte-todo-list-demo.netlify.com/)
+-   [GitHub Repo](https://github.com/soulcactus/svelte-todo-list)

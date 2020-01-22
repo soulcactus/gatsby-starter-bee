@@ -67,9 +67,9 @@ $ npm start
 
 ### 1. Netlify
 
-- [Netlify](https://www.netlify.com/)에 접속하여 계정을 생성합니다.
-- New site from Git 버튼을 클릭합니다.
-- GitHub, GitLab, Bitbucket 중 하나를 선택해 연결합니다.
+-   [Netlify](https://www.netlify.com/)에 접속하여 계정을 생성합니다.
+-   New site from Git 버튼을 클릭합니다.
+-   GitHub, GitLab, Bitbucket 중 하나를 선택해 연결합니다.
 
 ####
 
@@ -77,7 +77,7 @@ $ npm start
 
 ####
 
-- 저장소를 선택하고 Netlify를 설치합니다.
+-   저장소를 선택하고 Netlify를 설치합니다.
 
 ####
 
@@ -85,7 +85,7 @@ $ npm start
 
 ####
 
-- 빌드 옵션을 입력하고 Deploy site 버튼을 클릭하면 배포가 완료됩니다.
+-   빌드 옵션을 입력하고 Deploy site 버튼을 클릭하면 배포가 완료됩니다.
 
 ####
 
@@ -93,7 +93,7 @@ $ npm start
 
 ### 2. github pages
 
-- package.json에 아래 코드를 추가합니다.
+-   package.json에 아래 코드를 추가합니다.
 
 ```json
 "scripts": {
@@ -101,13 +101,13 @@ $ npm start
 }
 ```
 
-- gh-pages 패키지를 설치합니다.
+-   gh-pages 패키지를 설치합니다.
 
 ```bash
 $ npm i --save-dev gh-pages
 ```
 
-- 빌드를 진행합니다.
+-   빌드를 진행합니다.
 
 ```bash
 $ npm run deploy

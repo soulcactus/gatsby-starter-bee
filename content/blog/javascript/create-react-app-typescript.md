@@ -20,7 +20,7 @@ category: 'javascript'
 
 ## 📁 create-react-app with TpyeScript 설치
 
-- 다음과 같이 입력해 CRA TypeScript 프로젝트를 생성합니다.
+-   다음과 같이 입력해 CRA TypeScript 프로젝트를 생성합니다.
 
 ```bash
 npx create-react-app my-app --scripts-version=react-scripts-ts
@@ -48,7 +48,7 @@ npx create-react-app my-app --scripts-version=react-scripts-ts
 
 ## 🏃 프로젝트 시작
 
-- 아래 명령어를 입력하면 다음과 같이 실행됩니다.
+-   아래 명령어를 입력하면 다음과 같이 실행됩니다.
 
 ```bash
 cd my-app
