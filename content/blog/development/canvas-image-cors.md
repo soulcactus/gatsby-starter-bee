@@ -12,7 +12,8 @@ HTML을 canvas로 변환한 다음 blob 데이터로 변환해 이미지 파일�
 _CORS를 통하지 않고, 다른 origin으로 부터 가져온 데이터들은 canvas에 그려지는 즉시 canvas는 오염됩니다._
 _오염된 canvas는 더 이상 안전하지 않은 것으로 여겨지고, canvas 이미지에서 데이터를 가져오려는 어떤 시도든 exception이 발생합니다._(출처: [MDN web doc](https://developer.mozilla.org/ko/docs/Web/HTML/CORS_enabled_image))
 
-일단 서버 설정과 Amazon S3 버킷 설정 등에는 문제가 없었습니다.  
+일단 서버 설정과 Amazon S3 버킷 설정 등에는 문제가 없었습니다.
+
 이미지 태그에 crossorigin="anonymous"를 추가해 문제가 해결되는 듯했으나, 일부 이미지가 여전히 다운로드한 이미지 파일 내부에 포함되지 않는 것은 물론, 화면에도 표시되지 않는 문제가 추가로 발생했습니다.
 
 ## ❗️ 해결
