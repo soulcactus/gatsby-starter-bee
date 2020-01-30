@@ -275,7 +275,7 @@ let handleInsert = () => {
 
 -   check 액션 타입과 리듀서를 정의합니다.
 
-```javascript{51-60}
+```javascript{51-59}
 // src/store.js
 
 import { writable } from 'svelte/store';
