@@ -134,9 +134,9 @@ export const todoValue = setTodoValue();
 
 ## 📝 todos
 
--   먼저 initial state를 설정합니다.
+-   먼저 initial state와 todoId를 설정합니다.
 
-```javascript{5-21}
+```javascript{5-21, 23}
 // src/store.js
 
 import { writable } from 'svelte/store';
@@ -158,6 +158,8 @@ const todoList = [
         done: false,
     },
 ];
+
+let todoId = todoList[todoList.length - 1]['id'];
 
 function setTodoValue() {
     const { subscribe, set } = writable('');
@@ -173,7 +175,7 @@ export const todoValue = setTodoValue();
 
 -   todos 스토어를 생성하고 insert 액션타입과 리듀서를 정의합니다. (Svelte에서는 공식적으로 액션타입과 리듀서라는 용어를 사용하지 않지만 편의상 이렇게 설명하겠습니다.)
 
-```javascript{32-55}
+```javascript{34-52}
 // src/store.js
 
 import { writable } from 'svelte/store';
@@ -195,6 +197,8 @@ const todoList = [
         done: false,
     },
 ];
+
+let todoId = todoList[todoList.length - 1]['id'];
 
 function setTodoValue() {
     const { subscribe, set } = writable('');
@@ -213,11 +217,6 @@ function setTodo() {
         insert: (value) =>
             update((list) => {
                 const newList = [...list];
-                let todoId;
-
-                newList.length === 0
-                    ? (todoId = -1)
-                    : (todoId = newList[newList.length - 1]['id']);
 
                 const newTodo = {
                     id: ++todoId,
@@ -270,14 +269,13 @@ let handleInsert = () => {
 
 ####
 
-4. 현재 할일 목록이 없는 경우 todoId를 -1로 설정하고 목록이 있는 경우 마지막 item의 id를 todoId로 설정합니다.
-5. 새로운 리스트를 반환합니다.
+4. 새로운 리스트를 반환합니다.
 
 ####
 
 -   check 액션 타입과 리듀서를 정의합니다.
 
-```javascript{54-62}
+```javascript{51-60}
 // src/store.js
 
 import { writable } from 'svelte/store';
@@ -300,6 +298,8 @@ const todoList = [
     },
 ];
 
+let todoId = todoList[todoList.length - 1]['id'];
+
 function setTodoValue() {
     const { subscribe, set } = writable('');
 
@@ -317,11 +317,6 @@ function setTodo() {
         insert: (value) =>
             update((list) => {
                 const newList = [...list];
-                let todoId;
-
-                newList.length === 0
-                    ? (todoId = -1)
-                    : (todoId = newList[newList.length - 1]['id']);
 
                 const newTodo = {
                     id: ++todoId,
@@ -363,7 +358,7 @@ let handleCheck = (id, done) => {
 
 -   modify 액션 타입과 리듀서를 정의합니다.
 
-```javascript{63-71}
+```javascript{60-68}
 // src/store.js
 
 import { writable } from 'svelte/store';
@@ -386,6 +381,8 @@ const todoList = [
     },
 ];
 
+let todoId = todoList[todoList.length - 1]['id'];
+
 function setTodoValue() {
     const { subscribe, set } = writable('');
 
@@ -403,11 +400,6 @@ function setTodo() {
         insert: (value) =>
             update((list) => {
                 const newList = [...list];
-                let todoId;
-
-                newList.length === 0
-                    ? (todoId = -1)
-                    : (todoId = newList[newList.length - 1]['id']);
 
                 const newTodo = {
                     id: ++todoId,
@@ -443,7 +435,7 @@ export const todoValue = setTodoValue();
 
 -   remove 액션 타입과 리듀서를 정의한 다음 todos를 export합니다.
 
-```javascript{72-83, 88}
+```javascript{69-80, 85}
 // src/store.js
 
 import { writable } from 'svelte/store';
@@ -466,6 +458,8 @@ const todoList = [
     },
 ];
 
+let todoId = todoList[todoList.length - 1]['id'];
+
 function setTodoValue() {
     const { subscribe, set } = writable('');
 
@@ -483,11 +477,6 @@ function setTodo() {
         insert: (value) =>
             update((list) => {
                 const newList = [...list];
-                let todoId;
-
-                newList.length === 0
-                    ? (todoId = -1)
-                    : (todoId = newList[newList.length - 1]['id']);
 
                 const newTodo = {
                     id: ++todoId,
