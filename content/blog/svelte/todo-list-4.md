@@ -638,9 +638,9 @@ const handleKeyup = e => {
     element.focus();
     element.addEventListener('blur', modify, false);
   };
-
-  /* ... */
 </script>
+
+/* ... */
 ```
 
 TodoList 컴포넌트에서 todo prop을 받아야 하므로 export let todo는 지우지 않습니다.
