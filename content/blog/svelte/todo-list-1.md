@@ -210,40 +210,26 @@ $placeholder-color: #ccc;
 @import './styles/modules.scss';
 @import './styles/variables.scss';
 
-:global() {
-    html {
-        font-size: 62.5%;
-    }
-
-    body {
-        background: $body-background-color;
-        font-size: 1.4rem;
-        color: $body-text-color;
-    }
-
-    div {
-        box-sizing: border-box;
-    }
-
-    li {
-        list-style: none;
-    }
+:global(html) {
+    font-size: 62.5%;
 }
-```
 
-SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용해 작성해야 합니다. 아래와 같이 두 가지 방식 모두 유효합니다.
-
-```scss
 :global(body) {
-    margin: 0;
+    background: $body-background-color;
+    font-size: 1.4rem;
+    color: $body-text-color;
 }
 
-:global() {
-    body {
-        margin: 0;
-    }
+:global(div) {
+    box-sizing: border-box;
+}
+
+:global(li) {
+    list-style: none;
 }
 ```
+
+SVELTE에서 전역으로 스타일을 지정할 때는 :global(...)을 이용해 작성해야 합니다.
 
 -   App.svelte에서 기존 style 태그에 global.scss를 적용합니다.
 
