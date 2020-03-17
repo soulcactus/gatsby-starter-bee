@@ -4,18 +4,6 @@ date: 2020-3-17 15:16:16
 category: 'development'
 ---
 
-## 📁 Visual C++ Build Tools 설치
-
--   Visual C++ Build Tools가 설치돼 있지 않다면 [이곳](https://visualstudio.microsoft.com/ko/vs/older-downloads/)에서 Microsoft Build Tools를 다운로드합니다.
-
-> Visual Studio가 설치돼 있지 않다면 먼저 Visual Studio를 다운로드헤야 합니다.
-
-####
-
-![](./images/visual-studio.png)
-
-####
-
 ## 📁 LINUX/MAC
 
 -   curl을 이용해 설치합니다.
