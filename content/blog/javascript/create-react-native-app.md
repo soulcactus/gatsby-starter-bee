@@ -13,7 +13,7 @@ category: 'javascript'
 -   먼저 create-react-native-app을 전역으로 설치합니다.
 
 ```bash
-npm i -g create-react-native-app
+$ npm i -g create-react-native-app
 ```
 
 ## 📁 프로젝트 생성
@@ -21,7 +21,7 @@ npm i -g create-react-native-app
 -   다음과 같이 프로젝트를 생성합니다.
 
 ```bash
-create-react-native-app my-app
+$ create-react-native-app my-app
 ```
 
 ## 📁 템플릿 선택
@@ -55,8 +55,8 @@ create-react-native-app my-app
 -   아래 명령어를 입력하면 다음과 같이 실행됩니다.
 
 ```bash
-cd my-app
-npm start
+$ cd my-app
+$ npm start
 # open localhost:19002
 ```
 
@@ -107,5 +107,5 @@ export REACT_NATIVE_PACKAGER_HOSTNAME=your ip
 -   npm 재실행 후 Expo를 실행해 QR 코드를 다시 촬영합니다.
 
 ```bash
-npm start
+$ npm start
 ```

@@ -56,7 +56,7 @@ PostCSS보다 Sass를 선호하기 때문에 이번 튜토리얼에서도 Sass�
 ####
 
 ```bash
-npm i node-sass svelte-preprocess
+$ npm i node-sass svelte-preprocess
 ```
 
 -   그 다음 rollup.config.js에 설정을 추가합니다.
@@ -520,7 +520,7 @@ script 부분에 두 가지 점이 눈에 띄실 텐데요, 하나는 ~를 이�
 -   먼저 절대경로로 import하기 위해 rollup-plugin-alias를 설치합니다.
 
 ```bash
-npm i rollup-plugin-alias
+$ npm i rollup-plugin-alias
 ```
 
 -   그 다음 rollup.config.js에 설정을 추가합니다.
@@ -548,7 +548,7 @@ export default {
 -   다음으로 svg 파일을 import하기 위해 rollup-plugin-svg을 설치합니다.
 
 ```bash
-npm i rollup-plugin-svg
+$ npm i rollup-plugin-svg
 ```
 
 -   그 다음 rollup.config.js에 설정을 추가합니다.

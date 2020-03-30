@@ -25,7 +25,7 @@ BUG! exception in phase 'semantic analysis' in source unit '...'
 -   먼저 java 버전을 확인합니다.
 
 ```bash
-java -version
+$ java -version
 
 java version "13.0.1" 2019-10-15
 Java(TM) SE Runtime Environment (build 13.0.1+9)
@@ -79,5 +79,5 @@ gradle 저장소를 확인해 보니 6.0.1까지 릴리즈됐습니다. (2019년
 -   프로젝트 디렉토리에서 react-native run-android를 실행해 컴파일되는지 확인합니다.
 
 ```bash
-react-native run-android
+$ react-native run-android
 ```

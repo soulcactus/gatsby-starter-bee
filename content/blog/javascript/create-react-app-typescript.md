@@ -23,7 +23,7 @@ category: 'javascript'
 -   다음과 같이 입력해 CRA TypeScript 프로젝트를 생성합니다.
 
 ```bash
-npx create-react-app my-app --scripts-version=react-scripts-ts
+$ npx create-react-app my-app --scripts-version=react-scripts-ts
 ```
 
 ## 📁 디렉토리 구조
@@ -51,8 +51,8 @@ npx create-react-app my-app --scripts-version=react-scripts-ts
 -   아래 명령어를 입력하면 다음과 같이 실행됩니다.
 
 ```bash
-cd my-app
-npm start
+$ cd my-app
+$ npm start
 # open localhost:3000
 ```
 
