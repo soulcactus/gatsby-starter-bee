@@ -6,7 +6,7 @@ category: 'react'
 
 ![](./images/typescript-react.png)
 
-## 💬 들어가며
+## 📝 배경
 
 타입스크립트 도입에 대한 고민이 항상 있었습니다. 대표적인 이유로는 생산성 문제 때문이었는데요, NextJS 9버전에서 내장형 TypeScript를 지원하기 시작하면서 도입 쪽으로 생각을 굳혔습니다.
 
