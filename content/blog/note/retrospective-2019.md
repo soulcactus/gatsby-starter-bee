@@ -1,7 +1,7 @@
 ---
 title: '2020년에 쓰는 2019년 회고'
 date: 2020-1-6 18:01:12
-category: 'development'
+category: 'note'
 ---
 
 ## 💬 들어가며

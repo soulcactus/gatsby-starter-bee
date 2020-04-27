@@ -1,7 +1,7 @@
 ---
 title: 'GatsbyJS로 블로그 제작하기'
 date: 2019-8-2 18:26:13
-category: 'javascript'
+category: 'react'
 ---
 
 ## 📝 배경

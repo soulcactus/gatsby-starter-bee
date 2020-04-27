@@ -1,7 +1,7 @@
 ---
 title: '2020년 1분기 회고'
 date: 2020-4-6 19:47:12
-category: 'development'
+category: 'note'
 ---
 
 ## 💬 들어가며

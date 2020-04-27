@@ -1,7 +1,7 @@
 ---
 title: 'create-react-native-app(CRNA) 시작하기'
 date: 2019-10-11 12:50:11
-category: 'javascript'
+category: 'react'
 ---
 
 ![](./images/react-native.png)

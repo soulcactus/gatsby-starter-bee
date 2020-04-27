@@ -1,7 +1,7 @@
 ---
 title: 'create-react-app(CRA) with TypeScript 시작하기'
 date: 2019-11-13 13:20:59
-category: 'javascript'
+category: 'react'
 ---
 
 ![](./images/typescript-react.png)

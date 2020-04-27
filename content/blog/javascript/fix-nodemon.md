@@ -1,7 +1,7 @@
 ---
 title: 'nodemon address already 에러 해결하기'
 date: 2019-8-28 17:52:13
-category: 'development'
+category: 'javascript'
 ---
 
 ## 💥 문제

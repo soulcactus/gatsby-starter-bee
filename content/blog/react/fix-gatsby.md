@@ -1,7 +1,7 @@
 ---
 title: 'GatsbyJS gatsby develop 에러 해결하기'
 date: 2019-9-1 19:06:12
-category: 'javascript'
+category: 'react'
 ---
 
 ## 💥 문제
