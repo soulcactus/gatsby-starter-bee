@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://soulcactus.netlify.app/"
+  to = "https://soulcactus.dev/"
+  status = 301
+  force = true
